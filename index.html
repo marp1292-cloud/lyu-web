@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="es-BO">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="IMPORTADORA LYU - Productos importados para el hogar al mejor precio. Venta por unidad, mayor y caja. Envíos a domicilio en La Paz y El Alto, encomiendas a todo Bolivia. Pago contra entrega.">
+<meta name="keywords" content="importadora Bolivia, productos hogar La Paz, venta mayor La Paz, importadora LYU">
+<meta property="og:title" content="IMPORTADORA LYU - Productos para el Hogar">
+<meta property="og:description" content="Productos importados para el hogar. Envíos a todo Bolivia. Pago contra entrega en La Paz y El Alto.">
+<meta property="og:type" content="website">
+<title>IMPORTADORA LYU · Productos Importados para el Hogar · La Paz - El Alto</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --lyu-red: #9B1B1B;
+  --lyu-red-dark: #6B0F0F;
+  --lyu-red-deep: #4A0808;
+  --lyu-gold: #C9A566;
+  --lyu-gold-light: #E8CB8D;
+  --lyu-gold-dark: #A37E44;
+  --lyu-cream: #FAF6EF;
+  --lyu-black: #1A1210;
+  --lyu-gray: #6B5E54;
+  --lyu-gray-light: #E8E0D4;
+  --lyu-white: #FFFFFF;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'Inter', -apple-system, sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  color: var(--lyu-black);
+  background: var(--lyu-white);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+
+/* === TOP BAR === */
+.top-bar {
+  background: var(--lyu-red-deep);
+  color: var(--lyu-gold-light);
+  padding: 8px 20px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+.top-bar strong { color: var(--lyu-gold); font-weight: 600; }
+
+/* === NAVBAR === */
+.navbar {
+  background: var(--lyu-white);
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--lyu-gray-light);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.04);
+}
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.logo-mark {
+  width: 48px;
+  height: 48px;
+  background: var(--lyu-red);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--lyu-gold);
+  font-family: var(--serif);
+  font-size: 28px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(155, 27, 27, 0.25);
+}
+.logo-text {
+  font-family: var(--serif);
+  line-height: 1;
+}
+.logo-text .name {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--lyu-red);
+  letter-spacing: 1px;
+}
+.logo-text .tag {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--lyu-gold-dark);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+.nav-links a {
+  color: var(--lyu-black);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  transition: color 0.2s;
+  letter-spacing: 0.3px;
+}
+.nav-links a:hover { color: var(--lyu-red); }
+.nav-cta {
+  background: var(--lyu-red);
+  color: var(--lyu-white);
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+}
+.nav-cta:hover { background: var(--lyu-red-dark); transform: translateY(-1px); }
+.menu-toggle { display: none; background: none; border: none; font-size: 24px; color: var(--lyu-red); cursor: pointer; }
+
+/* === HERO === */
+.hero {
+  background: linear-gradient(135deg, var(--lyu-red-deep) 0%, var(--lyu-red) 70%, var(--lyu-red-dark) 100%);
+  color: var(--lyu-white);
+  padding: 80px 24px 100px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '裕';
+  position: absolute;
+  font-family: serif;
+  font-size: 500px;
+  color: var(--lyu-gold);
+  opacity: 0.06;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1;
+  pointer-events: none;
+}
+.hero-content { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; }
+.hero-badge {
+  display: inline-block;
+  background: rgba(201, 165, 102, 0.15);
+  border: 1px solid var(--lyu-gold);
+  color: var(--lyu-gold-light);
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(36px, 6vw, 64px);
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+.hero h1 em {
+  color: var(--lyu-gold);
+  font-style: italic;
+  font-weight: 700;
+}
+.hero-sub {
+  font-size: clamp(15px, 2vw, 18px);
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+.hero-ctas {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn-primary, .btn-secondary {
+  padding: 16px 32px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.25s;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+}
+.btn-primary {
+  background: var(--lyu-gold);
+  color: var(--lyu-red-deep);
+  box-shadow: 0 8px 24px rgba(201, 165, 102, 0.3);
+}
+.btn-primary:hover { background: var(--lyu-gold-light); transform: translateY(-2px); box-shadow: 0 12px 28px rgba(201, 165, 102, 0.4); }
+.btn-secondary {
+  background: transparent;
+  color: var(--lyu-white);
+  border: 2px solid rgba(255,255,255,0.4);
+}
+.btn-secondary:hover { background: rgba(255,255,255,0.1); border-color: var(--lyu-white); }
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 60px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 32px 24px;
+  background: rgba(0,0,0,0.2);
+  border-radius: 16px;
+  border: 1px solid rgba(201, 165, 102, 0.2);
+}
+.stat-item { text-align: center; }
+.stat-num {
+  font-family: var(--serif);
+  font-size: clamp(28px, 4vw, 38px);
+  font-weight: 700;
+  color: var(--lyu-gold);
+  display: block;
+  line-height: 1;
+}
+.stat-label {
+  font-size: 11px;
+  color: rgba(255,255,255,0.7);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-top: 8px;
+  display: block;
+}
+
+/* === TRUST BAR === */
+.trust-bar {
+  background: var(--lyu-cream);
+  padding: 24px;
+  border-bottom: 1px solid var(--lyu-gray-light);
+}
+.trust-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px;
+}
+.trust-icon {
+  width: 44px;
+  height: 44px;
+  background: var(--lyu-red);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--lyu-gold);
+  font-size: 22px;
+  flex-shrink: 0;
+}
+.trust-text { font-size: 13px; line-height: 1.4; }
+.trust-text strong { display: block; color: var(--lyu-black); font-weight: 600; margin-bottom: 2px; font-size: 13px; }
+.trust-text span { color: var(--lyu-gray); font-size: 12px; }
+
+/* === SECTION BASE === */
+.section { padding: 80px 24px; }
+.section-narrow { max-width: 1200px; margin: 0 auto; }
+.section-title-wrap { text-align: center; margin-bottom: 50px; }
+.section-eyebrow {
+  display: inline-block;
+  color: var(--lyu-gold-dark);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.section-title {
+  font-family: var(--serif);
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 600;
+  color: var(--lyu-black);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+.section-title em { color: var(--lyu-red); font-style: italic; }
+.section-desc {
+  color: var(--lyu-gray);
+  font-size: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* === PRODUCTS === */
+#productos { background: var(--lyu-white); }
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.product-card {
+  background: var(--lyu-white);
+  border: 1px solid var(--lyu-gray-light);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(155, 27, 27, 0.08);
+  border-color: var(--lyu-gold);
+}
+.product-img-wrap {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  background: var(--lyu-cream);
+  overflow: hidden;
+}
+.product-img-wrap img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: contain;
+  padding: 16px;
+  transition: transform 0.4s;
+}
+.product-card:hover .product-img-wrap img { transform: scale(1.05); }
+.product-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: var(--lyu-red);
+  color: var(--lyu-white);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+  z-index: 2;
+}
+.product-badge.gold { background: var(--lyu-gold); color: var(--lyu-red-deep); }
+.product-info { padding: 20px; flex: 1; display: flex; flex-direction: column; }
+.product-name {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--lyu-black);
+  margin-bottom: 6px;
+  line-height: 1.25;
+}
+.product-desc {
+  color: var(--lyu-gray);
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  flex: 1;
+}
+.price-tiers {
+  background: var(--lyu-cream);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+  border: 1px solid var(--lyu-gray-light);
+}
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 0;
+  font-size: 13px;
+}
+.price-row:not(:last-child) { border-bottom: 1px dashed var(--lyu-gray-light); }
+.price-row-label { color: var(--lyu-gray); font-size: 12px; }
+.price-row-value { font-weight: 700; color: var(--lyu-red); font-family: var(--serif); font-size: 16px; }
+.price-row.highlight .price-row-value { color: var(--lyu-gold-dark); }
+
+.product-selector {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+.qty-btn {
+  flex: 1;
+  padding: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: var(--lyu-white);
+  border: 1.5px solid var(--lyu-gray-light);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: var(--lyu-gray);
+}
+.qty-btn.active {
+  background: var(--lyu-red);
+  color: var(--lyu-white);
+  border-color: var(--lyu-red);
+}
+.qty-btn:hover:not(.active) { border-color: var(--lyu-red); color: var(--lyu-red); }
+
+.product-wa-btn {
+  width: 100%;
+  background: #25D366;
+  color: var(--lyu-white);
+  padding: 13px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+}
+.product-wa-btn:hover { background: #128C7E; transform: translateY(-1px); }
+.product-wa-btn svg { width: 18px; height: 18px; }
+
+/* === CÓMO FUNCIONA === */
+#como-funciona { background: var(--lyu-cream); }
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 20px;
+}
+.step {
+  text-align: center;
+  padding: 32px 24px;
+  background: var(--lyu-white);
+  border-radius: 16px;
+  border: 1px solid var(--lyu-gray-light);
+  position: relative;
+}
+.step-num {
+  width: 56px;
+  height: 56px;
+  background: var(--lyu-red);
+  color: var(--lyu-gold);
+  font-family: var(--serif);
+  font-size: 28px;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  box-shadow: 0 6px 16px rgba(155, 27, 27, 0.2);
+}
+.step h3 {
+  font-family: var(--serif);
+  font-size: 22px;
+  color: var(--lyu-black);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.step p { color: var(--lyu-gray); font-size: 14px; line-height: 1.6; }
+
+/* === POR QUÉ === */
+#por-que { background: var(--lyu-white); }
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.feature {
+  display: flex;
+  gap: 20px;
+  padding: 28px;
+  background: var(--lyu-cream);
+  border-radius: 16px;
+  border-left: 4px solid var(--lyu-red);
+  transition: all 0.3s;
+}
+.feature:hover { transform: translateX(4px); }
+.feature-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--lyu-red);
+  color: var(--lyu-gold);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+.feature-content h4 {
+  font-family: var(--serif);
+  font-size: 20px;
+  color: var(--lyu-black);
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+.feature-content p { color: var(--lyu-gray); font-size: 14px; line-height: 1.6; }
+
+/* === TESTIMONIOS === */
+#testimonios { background: var(--lyu-red-deep); color: var(--lyu-white); }
+#testimonios .section-title { color: var(--lyu-white); }
+#testimonios .section-title em { color: var(--lyu-gold); }
+#testimonios .section-desc { color: rgba(255,255,255,0.75); }
+#testimonios .section-eyebrow { color: var(--lyu-gold); }
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.testimonial {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(201, 165, 102, 0.2);
+  padding: 32px 28px;
+  border-radius: 16px;
+  position: relative;
+}
+.testimonial::before {
+  content: '"';
+  position: absolute;
+  top: -5px;
+  left: 20px;
+  font-family: var(--serif);
+  font-size: 80px;
+  color: var(--lyu-gold);
+  opacity: 0.4;
+  line-height: 1;
+}
+.testimonial-text {
+  color: rgba(255,255,255,0.9);
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  font-style: italic;
+}
+.testimonial-author { display: flex; align-items: center; gap: 12px; }
+.testimonial-avatar {
+  width: 44px;
+  height: 44px;
+  background: var(--lyu-gold);
+  color: var(--lyu-red-deep);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-family: var(--serif);
+  font-size: 18px;
+}
+.testimonial-info strong {
+  display: block;
+  color: var(--lyu-white);
+  font-size: 14px;
+  font-weight: 600;
+}
+.testimonial-info span { color: rgba(255,255,255,0.6); font-size: 12px; }
+.testimonial-stars { color: var(--lyu-gold); font-size: 14px; margin-top: 4px; letter-spacing: 2px; }
+
+/* === FAQ === */
+#faq { background: var(--lyu-cream); }
+.faq-list { max-width: 800px; margin: 0 auto; }
+.faq-item {
+  background: var(--lyu-white);
+  border-radius: 12px;
+  margin-bottom: 12px;
+  border: 1px solid var(--lyu-gray-light);
+  overflow: hidden;
+  transition: all 0.2s;
+}
+.faq-item:hover { border-color: var(--lyu-gold); }
+.faq-question {
+  width: 100%;
+  padding: 20px 24px;
+  background: none;
+  border: none;
+  text-align: left;
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--lyu-black);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--sans);
+}
+.faq-question::after {
+  content: '+';
+  color: var(--lyu-red);
+  font-size: 24px;
+  font-weight: 300;
+  transition: transform 0.3s;
+}
+.faq-item.active .faq-question::after { content: '−'; }
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s, padding 0.3s;
+  padding: 0 24px;
+  color: var(--lyu-gray);
+  font-size: 14px;
+  line-height: 1.7;
+}
+.faq-item.active .faq-answer {
+  max-height: 300px;
+  padding: 0 24px 20px;
+}
+
+/* === CONTACTO === */
+#contacto { background: var(--lyu-white); }
+.contact-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+.contact-info h3 {
+  font-family: var(--serif);
+  font-size: 28px;
+  color: var(--lyu-black);
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.contact-info h3 em { color: var(--lyu-red); font-style: italic; }
+.contact-list {
+  list-style: none;
+  margin-bottom: 28px;
+}
+.contact-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--lyu-gray-light);
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.contact-list li strong {
+  color: var(--lyu-black);
+  font-size: 14px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 2px;
+}
+.contact-list li span { color: var(--lyu-gray); font-size: 14px; }
+.contact-icon {
+  width: 32px;
+  height: 32px;
+  background: var(--lyu-red);
+  color: var(--lyu-gold);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.contact-map {
+  border-radius: 16px;
+  overflow: hidden;
+  height: 360px;
+  border: 1px solid var(--lyu-gray-light);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+.contact-map iframe { width: 100%; height: 100%; border: none; }
+
+/* === FOOTER === */
+.footer {
+  background: var(--lyu-black);
+  color: var(--lyu-gold-light);
+  padding: 60px 24px 24px;
+}
+.footer-grid {
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+.footer-brand { max-width: 320px; }
+.footer-brand .logo-text .name { color: var(--lyu-gold); }
+.footer-brand .logo-text .tag { color: var(--lyu-gold-dark); }
+.footer-brand p {
+  color: rgba(250, 246, 239, 0.6);
+  font-size: 13px;
+  line-height: 1.7;
+  margin-top: 16px;
+}
+.footer-col h4 {
+  font-family: var(--serif);
+  color: var(--lyu-gold);
+  font-size: 18px;
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a {
+  color: rgba(250, 246, 239, 0.7);
+  text-decoration: none;
+  font-size: 13px;
+  transition: color 0.2s;
+}
+.footer-col a:hover { color: var(--lyu-gold); }
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 24px;
+  border-top: 1px solid rgba(201, 165, 102, 0.15);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 12px;
+  color: rgba(250, 246, 239, 0.5);
+}
+
+/* === FLOATING WHATSAPP === */
+.wa-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+  transition: all 0.2s;
+  z-index: 99;
+  animation: pulse 2s infinite;
+}
+.wa-float:hover { transform: scale(1.1); }
+.wa-float svg { width: 32px; height: 32px; }
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4); }
+  50% { box-shadow: 0 8px 24px rgba(37, 211, 102, 0.7), 0 0 0 12px rgba(37, 211, 102, 0); }
+}
+
+/* === MOBILE === */
+@media (max-width: 900px) {
+  .trust-grid { grid-template-columns: repeat(2, 1fr); }
+  .products-grid { grid-template-columns: repeat(2, 1fr); }
+  .steps-grid { grid-template-columns: 1fr; }
+  .features-grid { grid-template-columns: 1fr; }
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .contact-wrap { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .nav-links { display: none; }
+  .menu-toggle { display: block; }
+  .nav-links.open {
+    display: flex;
+    position: absolute;
+    top: 80px;
+    left: 0; right: 0;
+    background: white;
+    flex-direction: column;
+    padding: 24px;
+    gap: 20px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    border-bottom: 1px solid var(--lyu-gray-light);
+  }
+}
+@media (max-width: 600px) {
+  .section { padding: 60px 16px; }
+  .hero { padding: 60px 16px 80px; }
+  .products-grid { grid-template-columns: 1fr; }
+  .trust-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .hero-stats { grid-template-columns: 1fr; gap: 20px; padding: 24px 16px; }
+  .hero-ctas { flex-direction: column; align-items: stretch; }
+  .btn-primary, .btn-secondary { justify-content: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- === TOP BAR === -->
+<div class="top-bar">
+  📦 Envíos a domicilio en <strong>La Paz y El Alto</strong> · Encomiendas a todo el país · 💵 <strong>Pago contra entrega</strong>
+</div>
+
+<!-- === NAVBAR === -->
+<nav class="navbar">
+  <div class="logo-box">
+    <div class="logo-mark">L</div>
+    <div class="logo-text">
+      <div class="name">LYU</div>
+      <div class="tag">Importadora</div>
+    </div>
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#productos">Productos</a></li>
+    <li><a href="#como-funciona">Cómo comprar</a></li>
+    <li><a href="#por-que">Por qué LYU</a></li>
+    <li><a href="#faq">Preguntas</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+  <a href="https://wa.me/59162438362?text=Hola,%20quiero%20hacer%20una%20consulta" class="nav-cta" target="_blank" rel="noopener">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 012.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.17-3.12.82.83-3.04-.2-.32a8.188 8.188 0 01-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24zM8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.87.86-.87 2.07 0 1.22.89 2.39 1 2.56.14.17 1.76 2.67 4.25 3.73.59.27 1.05.42 1.41.53.59.19 1.13.16 1.56.1.48-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.16-.48-.27-.25-.14-1.47-.74-1.69-.82-.23-.08-.37-.12-.56.12-.16.25-.64.81-.78.97-.15.17-.29.19-.53.07-.26-.13-1.06-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.12-.24-.01-.39.11-.5.11-.11.27-.29.37-.44.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.11-.56-1.35-.77-1.84-.2-.48-.4-.42-.56-.43-.14 0-.3-.01-.47-.01z"/></svg>
+    WhatsApp
+  </a>
+  <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+</nav>
+
+<!-- === HERO === -->
+<section class="hero">
+  <div class="hero-content">
+    <span class="hero-badge">Productos de Importación</span>
+    <h1>Soluciones inteligentes<br>para tu <em>hogar</em></h1>
+    <p class="hero-sub">
+      Productos importados de calidad al mejor precio del mercado. Compra <strong>por unidad, al por mayor o por caja</strong> y recibe en La Paz, El Alto o donde te encuentres en Bolivia.
+    </p>
+    <div class="hero-ctas">
+      <a href="#productos" class="btn-primary">Ver productos ↓</a>
+      <a href="https://wa.me/59162438362?text=Hola,%20quiero%20ver%20el%20cat%C3%A1logo%20completo" class="btn-secondary" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 012.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.17-3.12.82.83-3.04-.2-.32a8.188 8.188 0 01-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24zM8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.87.86-.87 2.07 0 1.22.89 2.39 1 2.56.14.17 1.76 2.67 4.25 3.73.59.27 1.05.42 1.41.53.59.19 1.13.16 1.56.1.48-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.16-.48-.27-.25-.14-1.47-.74-1.69-.82-.23-.08-.37-.12-.56.12-.16.25-.64.81-.78.97-.15.17-.29.19-.53.07-.26-.13-1.06-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.12-.24-.01-.39.11-.5.11-.11.27-.29.37-.44.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.11-.56-1.35-.77-1.84-.2-.48-.4-.42-.56-.43-.14 0-.3-.01-.47-.01z"/></svg>
+        Chatear ahora
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-num">12+</span>
+        <span class="stat-label">Productos en stock</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">24/7</span>
+        <span class="stat-label">Atención en WhatsApp</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">2</span>
+        <span class="stat-label">Ciudades con delivery</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- === TRUST BAR === -->
+<section class="trust-bar">
+  <div class="trust-grid">
+    <div class="trust-item">
+      <div class="trust-icon">💵</div>
+      <div class="trust-text">
+        <strong>Pago contra entrega</strong>
+        <span>Pagas al recibir en La Paz y El Alto</span>
+      </div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">🚚</div>
+      <div class="trust-text">
+        <strong>Entrega rápida</strong>
+        <span>En el día en La Paz y El Alto</span>
+      </div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">📦</div>
+      <div class="trust-text">
+        <strong>Venta por mayor</strong>
+        <span>Precios especiales desde 4 unidades</span>
+      </div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">🏪</div>
+      <div class="trust-text">
+        <strong>Tienda física</strong>
+        <span>Av. La Bandera Nº 1438, La Paz</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- === PRODUCTOS === -->
+<section id="productos" class="section">
+  <div class="section-narrow">
+    <div class="section-title-wrap">
+      <span class="section-eyebrow">Catálogo</span>
+      <h2 class="section-title">Productos <em>destacados</em></h2>
+      <p class="section-desc">
+        Selecciona la cantidad que necesitas: <strong>unidad, mayor (4+)</strong> o <strong>caja completa</strong>. Los precios se actualizan automáticamente.
+      </p>
+    </div>
+
+    <div class="products-grid" id="productsGrid">
+      <!-- Los productos se inyectan dinámicamente -->
+    </div>
+  </div>
+</section>
+
+<!-- === CÓMO FUNCIONA === -->
+<section id="como-funciona" class="section">
+  <div class="section-narrow">
+    <div class="section-title-wrap">
+      <span class="section-eyebrow">Comprar es fácil</span>
+      <h2 class="section-title">Tu pedido en <em>3 pasos</em></h2>
+      <p class="section-desc">Diseñamos un proceso simple, seguro y sin complicaciones.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Elige tu producto</h3>
+        <p>Explora el catálogo y selecciona cuánto necesitas: por unidad, al por mayor o por caja completa. Hacemos clic en "Comprar por WhatsApp".</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Coordinamos contigo</h3>
+        <p>Te atendemos al instante por WhatsApp. Confirmamos producto, cantidad, dirección de entrega y todas tus dudas se resuelven ahí mismo.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Recibes y pagas</h3>
+        <p>En La Paz y El Alto pagas <strong>contra entrega</strong> (QR o efectivo) al recibir y verificar tu producto. Para otras ciudades, enviamos por encomienda.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- === POR QUÉ LYU === -->
+<section id="por-que" class="section">
+  <div class="section-narrow">
+    <div class="section-title-wrap">
+      <span class="section-eyebrow">Por qué elegirnos</span>
+      <h2 class="section-title">La importadora con <em>más ventajas</em></h2>
+      <p class="section-desc">Más que una tienda, una experiencia de compra pensada para ti.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature">
+        <div class="feature-icon">✓</div>
+        <div class="feature-content">
+          <h4>Pago contra entrega</h4>
+          <p>En La Paz y El Alto pagas cuando recibas y verifiques tu producto. Cero riesgo para ti: QR o efectivo directo al repartidor.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">⚡</div>
+        <div class="feature-content">
+          <h4>Atención 24/7 real</h4>
+          <p>Responde nuestro equipo en cualquier momento del día, cualquier día de la semana. Sin esperas, sin horarios limitados.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">📊</div>
+        <div class="feature-content">
+          <h4>Tres precios según necesites</h4>
+          <p>Si es para ti, precio unidad. Si revendes o compras volumen, precio mayor desde 4 unidades. Si es para tu negocio, precio caja.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🏢</div>
+        <div class="feature-content">
+          <h4>Tienda física verificable</h4>
+          <p>Visítanos cuando quieras en Av. La Bandera Nº 1438, La Paz. Somos una empresa real con dirección real, no solo un WhatsApp.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🔁</div>
+        <div class="feature-content">
+          <h4>Envíos a todo Bolivia</h4>
+          <p>Delivery en el día a domicilio en La Paz y El Alto. A Cochabamba, Santa Cruz, Sucre, Tarija y resto del país por encomienda.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">💎</div>
+        <div class="feature-content">
+          <h4>Productos seleccionados</h4>
+          <p>Cada producto es curado por nosotros. Importamos lo que funciona, lo que dura, lo que realmente te va a servir en casa.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- === TESTIMONIOS === -->
+<section id="testimonios" class="section">
+  <div class="section-narrow">
+    <div class="section-title-wrap">
+      <span class="section-eyebrow">Lo que dicen</span>
+      <h2 class="section-title">Nuestros <em>clientes</em></h2>
+      <p class="section-desc">Opiniones reales de personas que ya confiaron en IMPORTADORA LYU.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial">
+        <p class="testimonial-text">[Aquí irá un testimonio real de tu cliente. Pídele una reseña después de cada entrega.]</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">—</div>
+          <div class="testimonial-info">
+            <strong>Nombre del cliente</strong>
+            <span>La Paz · Fecha</span>
+            <div class="testimonial-stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <p class="testimonial-text">[Aquí otro testimonio real. Ideas: sobre rapidez de entrega, calidad del producto, atención, etc.]</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">—</div>
+          <div class="testimonial-info">
+            <strong>Nombre del cliente</strong>
+            <span>El Alto · Fecha</span>
+            <div class="testimonial-stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <p class="testimonial-text">[Aquí un testimonio real de un cliente mayorista. Ideal: alguien que revende y confía en ustedes.]</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">—</div>
+          <div class="testimonial-info">
+            <strong>Nombre del cliente</strong>
+            <span>Cochabamba · Fecha</span>
+            <div class="testimonial-stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- === FAQ === -->
+<section id="faq" class="section">
+  <div class="section-narrow">
+    <div class="section-title-wrap">
+      <span class="section-eyebrow">Preguntas frecuentes</span>
+      <h2 class="section-title">Todo lo que <em>necesitas saber</em></h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question">¿Cómo funciona el pago contra entrega?</button>
+        <div class="faq-answer"><p>En La Paz y El Alto, pagas directamente a nuestro repartidor <strong>después de recibir y verificar tu producto</strong>. Puedes pagar con QR o en efectivo. Cero riesgo para ti.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">¿Cuánto cuesta el envío a domicilio?</button>
+        <div class="faq-answer"><p>El costo depende de la cantidad que pidas y se te informa cuando confirmas el pedido por WhatsApp, junto con el total a pagar contra entrega. Mientras más unidades pidas, menor es el costo de envío.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">¿Hacen envíos fuera de La Paz y El Alto?</button>
+        <div class="faq-answer"><p>Sí, enviamos a todo Bolivia por encomienda (Cochabamba, Santa Cruz, Sucre, Tarija, Oruro, Potosí, etc.). El envío por encomienda se paga directamente a la empresa de transporte al recibir, mientras que el producto se paga por QR o transferencia antes del envío.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">¿Cuál es la diferencia entre precio unidad, mayor y caja?</button>
+        <div class="faq-answer"><p><strong>Precio unidad:</strong> para compras de 1 a 3 unidades. <strong>Precio mayor:</strong> desde 4 unidades, con descuento automático. <strong>Precio caja:</strong> el mejor precio por unidad, ideal para negocios y revendedores. Los tres precios se muestran siempre antes de comprar.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">¿Los productos tienen garantía?</button>
+        <div class="faq-answer"><p>Todos nuestros productos son verificados antes de entregarse. Si recibes algún producto con defecto de fábrica, contáctanos por WhatsApp y coordinamos el cambio. Por eso recomendamos verificar tu producto antes de pagar al repartidor.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">¿Puedo visitar la tienda física?</button>
+        <div class="faq-answer"><p>¡Claro! Te esperamos en Av. La Bandera Nº 1438, casi esquina Calle Colón, La Paz. Horario de lunes a viernes de 8:30 a 18:30 y sábados de 8:30 a 13:30.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">¿Atienden por WhatsApp las 24 horas?</button>
+        <div class="faq-answer"><p>Sí. Nuestro canal de WhatsApp atiende 24/7 para consultas de productos, precios, imágenes y hacer pedidos. Los envíos se coordinan en horario de tienda.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- === CONTACTO === -->
+<section id="contacto" class="section">
+  <div class="section-narrow">
+    <div class="section-title-wrap">
+      <span class="section-eyebrow">Visítanos</span>
+      <h2 class="section-title">Encuéntranos <em>aquí</em></h2>
+    </div>
+    <div class="contact-wrap">
+      <div class="contact-info">
+        <h3>Contacto <em>directo</em></h3>
+        <ul class="contact-list">
+          <li>
+            <div class="contact-icon">📍</div>
+            <div>
+              <strong>Dirección</strong>
+              <span>Av. La Bandera Nº 1438, casi esq. Calle Colón<br>La Paz, Bolivia</span>
+            </div>
+          </li>
+          <li>
+            <div class="contact-icon">📱</div>
+            <div>
+              <strong>WhatsApp</strong>
+              <span><a href="https://wa.me/59162438362" style="color:var(--lyu-red); text-decoration:none; font-weight:600;">+591 62438362</a> (atención 24/7)</span>
+            </div>
+          </li>
+          <li>
+            <div class="contact-icon">🕐</div>
+            <div>
+              <strong>Horario de tienda</strong>
+              <span>Lunes a viernes: 8:30 — 18:30<br>Sábados: 8:30 — 13:30</span>
+            </div>
+          </li>
+          <li>
+            <div class="contact-icon">💳</div>
+            <div>
+              <strong>Formas de pago</strong>
+              <span>QR, transferencia, efectivo contra entrega</span>
+            </div>
+          </li>
+        </ul>
+        <a href="https://wa.me/59162438362?text=Hola,%20quisiera%20hacer%20una%20consulta" class="btn-primary" target="_blank" rel="noopener" style="background: var(--lyu-red); color: white;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 012.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.17-3.12.82.83-3.04-.2-.32a8.188 8.188 0 01-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24zM8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.87.86-.87 2.07 0 1.22.89 2.39 1 2.56.14.17 1.76 2.67 4.25 3.73.59.27 1.05.42 1.41.53.59.19 1.13.16 1.56.1.48-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.16-.48-.27-.25-.14-1.47-.74-1.69-.82-.23-.08-.37-.12-.56.12-.16.25-.64.81-.78.97-.15.17-.29.19-.53.07-.26-.13-1.06-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.12-.24-.01-.39.11-.5.11-.11.27-.29.37-.44.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.11-.56-1.35-.77-1.84-.2-.48-.4-.42-.56-.43-.14 0-.3-.01-.47-.01z"/></svg>
+          Chatear por WhatsApp
+        </a>
+      </div>
+      <div class="contact-map">
+        <iframe src="https://maps.google.com/maps?q=-16.494306,-68.130194&hl=es&z=17&output=embed" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- === FOOTER === -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo-box">
+        <div class="logo-mark" style="background: var(--lyu-gold); color: var(--lyu-red-deep);">L</div>
+        <div class="logo-text">
+          <div class="name">LYU</div>
+          <div class="tag">Importadora</div>
+        </div>
+      </div>
+      <p>Productos importados de calidad para el hogar boliviano. Ubicados en La Paz, con envíos a todo el país. Tu tienda de confianza para compras por unidad, mayor y caja.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Tienda</h4>
+      <ul>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#como-funciona">Cómo comprar</a></li>
+        <li><a href="#por-que">Por qué LYU</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Ayuda</h4>
+      <ul>
+        <li><a href="#faq">Preguntas frecuentes</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="https://wa.me/59162438362" target="_blank" rel="noopener">WhatsApp</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Síguenos</h4>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">TikTok</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 IMPORTADORA LYU · Todos los derechos reservados</div>
+    <div>La Paz, Bolivia 🇧🇴</div>
+  </div>
+</footer>
+
+<!-- === FLOATING WHATSAPP === -->
+<a href="https://wa.me/59162438362?text=Hola,%20quisiera%20hacer%20una%20consulta" class="wa-float" target="_blank" rel="noopener" aria-label="Chatear por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 012.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.17-3.12.82.83-3.04-.2-.32a8.188 8.188 0 01-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24zM8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.87.86-.87 2.07 0 1.22.89 2.39 1 2.56.14.17 1.76 2.67 4.25 3.73.59.27 1.05.42 1.41.53.59.19 1.13.16 1.56.1.48-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.16-.48-.27-.25-.14-1.47-.74-1.69-.82-.23-.08-.37-.12-.56.12-.16.25-.64.81-.78.97-.15.17-.29.19-.53.07-.26-.13-1.06-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.12-.24-.01-.39.11-.5.11-.11.27-.29.37-.44.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.11-.56-1.35-.77-1.84-.2-.48-.4-.42-.56-.43-.14 0-.3-.01-.47-.01z"/></svg>
+</a>
+
+<script>
+// === CATÁLOGO DE PRODUCTOS ===
+const productos = [
+  {
+    nombre: "Organizador de Ropa",
+    desc: "Caja organizadora de tela tipo lona, 40×28×20 cm. Ideal para guardar ropa, toallas o frazadas.",
+    unidad: 18, mayor: 15, caja: 12, unidadesCaja: 200,
+    img: "img/organizador-ropa.jpg",
+    badge: "Más vendido", badgeType: "red"
+  },
+  {
+    nombre: "Hervidora de Huevos",
+    desc: "Hervidor eléctrico automático, capacidad para 7 huevos. Se apaga solo al terminar.",
+    unidad: 55, mayor: 47, caja: 42.5, unidadesCaja: 50,
+    img: "img/hervidora-huevos.jpg",
+    badge: "Top ventas", badgeType: "gold"
+  },
+  {
+    nombre: "Trapeador Giratorio",
+    desc: "Trapeador de microfibra con mango largo desmontable, ultra absorbente y fácil de escurrir.",
+    unidad: 39, mayor: 30, caja: 25, unidadesCaja: 100,
+    img: "img/trapeador-giratorio.jpg"
+  },
+  {
+    nombre: "Mesa para Laptop",
+    desc: "Mesa portátil plegable de madera MDF y metal, 60×40 cm. Ideal para cama o sofá.",
+    unidad: 85, mayor: 75, caja: 65, unidadesCaja: 20,
+    img: "img/mesa-laptop.jpg"
+  },
+  {
+    nombre: "Limpiador de Brochas",
+    desc: "Limpiador eléctrico USB que lava y seca brochas de maquillaje en segundos.",
+    unidad: 65, mayor: 50, caja: 40, unidadesCaja: 100,
+    img: "img/limpiador-brochas.jpg"
+  },
+  {
+    nombre: "Secador de Zapatos",
+    desc: "Secador eléctrico que elimina humedad y malos olores desde el interior del zapato.",
+    unidad: 85, mayor: 75, caja: 65, unidadesCaja: 30,
+    img: "img/secador-zapatos.jpg"
+  },
+  {
+    nombre: "Set Organizador Ropa Interior (4u)",
+    desc: "Set de 4 organizadores de cajón para brasieres, pantys y medias.",
+    unidad: 55, mayor: 45, caja: 40, unidadesCaja: 100,
+    img: "img/set-ropa-interior.jpg"
+  },
+  {
+    nombre: "Manta para Picnic",
+    desc: "Manta impermeable y plegable de 140×120 cm. Para picnic, camping o playa.",
+    unidad: 50, mayor: 40, caja: 30, unidadesCaja: 150,
+    img: "img/manta-picnic.jpg"
+  },
+  {
+    nombre: "Bandeja para Huevos",
+    desc: "Organizador apilable de plástico transparente para 24 huevos. Ahorra espacio.",
+    unidad: 65, mayor: 55, caja: 50, unidadesCaja: 100,
+    img: "img/bandeja-huevos.jpg"
+  },
+  {
+    nombre: "Encendedor Eléctrico",
+    desc: "Encendedor recargable USB, cuello flexible. Sin gas, resistente al viento.",
+    unidad: 20, mayor: 17, caja: 14, unidadesCaja: 200,
+    img: "img/encendedor-electrico.jpg"
+  },
+  {
+    nombre: "Set de Tapas Protectoras (6u)",
+    desc: "Set de 6 tapas de silicona reutilizables en varios tamaños para alimentos.",
+    unidad: 19, mayor: 12, caja: 9, unidadesCaja: 250,
+    img: "img/tapas-protectoras.jpg"
+  },
+  {
+    nombre: "Afilador de Cuchillo",
+    desc: "Afilador de 3 etapas (tungsteno, cerámica, fino) con base antideslizante.",
+    unidad: 19, mayor: 15, caja: 9.5, unidadesCaja: 144,
+    img: "img/afilador-cuchillo.jpg"
+  }
+];
+
+const WA_NUMBER = "59162438362";
+
+// Fallback: si .jpg no existe, intenta .jpeg, luego .JPG, luego placeholder
+function tryImageFallback(imgEl, originalPath) {
+  const tried = imgEl.dataset.tried || '';
+  if (!tried.includes('jpeg')) {
+    imgEl.dataset.tried = tried + 'jpeg,';
+    imgEl.src = originalPath.replace(/\.jpg$/, '.jpeg');
+  } else if (!tried.includes('JPG')) {
+    imgEl.dataset.tried = tried + 'JPG,';
+    imgEl.src = originalPath.replace(/\.jpg$/, '.JPG');
+  } else if (!tried.includes('JPEG')) {
+    imgEl.dataset.tried = tried + 'JPEG,';
+    imgEl.src = originalPath.replace(/\.jpg$/, '.JPEG');
+  } else if (!tried.includes('png')) {
+    imgEl.dataset.tried = tried + 'png,';
+    imgEl.src = originalPath.replace(/\.jpg$/, '.png');
+  } else {
+    imgEl.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><rect fill="%23FAF6EF" width="400" height="400"/><text x="50%25" y="50%25" font-family="Georgia" font-size="20" fill="%239B1B1B" text-anchor="middle" dominant-baseline="middle">LYU</text></svg>';
+  }
+}
+
+// === RENDERIZAR PRODUCTOS ===
+function renderProducts() {
+  const grid = document.getElementById('productsGrid');
+  grid.innerHTML = productos.map((p, i) => `
+    <div class="product-card" data-product="${i}">
+      <div class="product-img-wrap">
+        ${p.badge ? `<div class="product-badge ${p.badgeType === 'gold' ? 'gold' : ''}">${p.badge}</div>` : ''}
+        <img src="${p.img}" alt="${p.nombre}" loading="lazy" onerror="tryImageFallback(this, '${p.img}')">
+      </div>
+      <div class="product-info">
+        <h3 class="product-name">${p.nombre}</h3>
+        <p class="product-desc">${p.desc}</p>
+        <div class="price-tiers">
+          <div class="price-row">
+            <span class="price-row-label">Unidad (1 – 3)</span>
+            <span class="price-row-value">Bs ${p.unidad}</span>
+          </div>
+          <div class="price-row">
+            <span class="price-row-label">Mayor (4+)</span>
+            <span class="price-row-value">Bs ${p.mayor}</span>
+          </div>
+          <div class="price-row highlight">
+            <span class="price-row-label">Caja (${p.unidadesCaja}u)</span>
+            <span class="price-row-value">Bs ${p.caja}</span>
+          </div>
+        </div>
+        <div class="product-selector">
+          <button class="qty-btn active" data-qty="unidad" onclick="selectQty(${i}, 'unidad', this)">Unidad</button>
+          <button class="qty-btn" data-qty="mayor" onclick="selectQty(${i}, 'mayor', this)">Mayor</button>
+          <button class="qty-btn" data-qty="caja" onclick="selectQty(${i}, 'caja', this)">Caja</button>
+        </div>
+        <button class="product-wa-btn" onclick="comprarWA(${i})">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 012.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.17-3.12.82.83-3.04-.2-.32a8.188 8.188 0 01-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24zM8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.87.86-.87 2.07 0 1.22.89 2.39 1 2.56.14.17 1.76 2.67 4.25 3.73.59.27 1.05.42 1.41.53.59.19 1.13.16 1.56.1.48-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.16-.48-.27-.25-.14-1.47-.74-1.69-.82-.23-.08-.37-.12-.56.12-.16.25-.64.81-.78.97-.15.17-.29.19-.53.07-.26-.13-1.06-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.12-.24-.01-.39.11-.5.11-.11.27-.29.37-.44.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.11-.56-1.35-.77-1.84-.2-.48-.4-.42-.56-.43-.14 0-.3-.01-.47-.01z"/></svg>
+          Comprar por WhatsApp
+        </button>
+      </div>
+    </div>
+  `).join('');
+}
+
+const selectedQty = {};
+
+function selectQty(productIndex, qtyType, btn) {
+  selectedQty[productIndex] = qtyType;
+  btn.parentElement.querySelectorAll('.qty-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+function comprarWA(productIndex) {
+  const p = productos[productIndex];
+  const qty = selectedQty[productIndex] || 'unidad';
+  let mensaje = '';
+  if (qty === 'unidad') {
+    mensaje = `Hola, quisiera comprar ${p.nombre} al precio unidad (Bs ${p.unidad} c/u).`;
+  } else if (qty === 'mayor') {
+    mensaje = `Hola, quisiera comprar ${p.nombre} al precio mayor (Bs ${p.mayor} c/u desde 4 unidades).`;
+  } else {
+    mensaje = `Hola, quisiera comprar una caja completa (${p.unidadesCaja} unidades) de ${p.nombre} al precio caja (Bs ${p.caja} c/u).`;
+  }
+  const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(mensaje)}`;
+  window.open(url, '_blank');
+}
+
+// === FAQ ACCORDION ===
+document.querySelectorAll('.faq-question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.parentElement;
+    const wasActive = item.classList.contains('active');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+    if (!wasActive) item.classList.add('active');
+  });
+});
+
+// === INIT ===
+renderProducts();
+
+// Smooth scroll for nav links
+document.querySelectorAll('.nav-links a').forEach(a => {
+  a.addEventListener('click', () => {
+    document.getElementById('navLinks').classList.remove('open');
+  });
+});
+</script>
+
+</body>
+</html>
