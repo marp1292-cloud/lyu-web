@@ -1,0 +1,46 @@
+name: Sincronizar catálogos
+
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-catalogs
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Leer Google Sheets y actualizar catálogos
+        run: node scripts/sync-catalogs.mjs
+
+      - name: Validar archivos
+        run: git diff --check
+
+      - name: Guardar cambios
+        shell: bash
+        run: |
+          if git diff --quiet; then
+            echo "No hay cambios de catálogo."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html qhathu/index.html shopix/index.html nova/index.html
+          git commit -m "Actualizar catálogos desde Google Sheets"
+          git push
