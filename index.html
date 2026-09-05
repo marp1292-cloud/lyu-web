@@ -1118,14 +1118,15 @@ function escapeHTML(s){
 }
 
 function whatsappLink(p, cantidad=1){
+  const tieneCaja = Number.isFinite(p.uc) && p.uc > 0 && Number.isFinite(p.pc);
   let msg = `Hola IMPORTADORA LYU, me interesa este producto:\n\n`;
   msg += `📦 *${p.nombre}*\n`;
   if(cantidad === 1){
     msg += `💰 Precio unidad: Bs ${fmt(p.pu)}\n`;
     msg += `🛒 Mayor (4+): Bs ${fmt(p.pm)} c/u\n`;
-    msg += `📦 Caja (${p.uc}u): Bs ${fmt(p.pc)} c/u\n\n`;
-    msg += `¿Está disponible? ¿Cómo lo recojo o me lo envían?`;
-  } else if(cantidad >= p.uc){
+    if(tieneCaja) msg += `📦 Caja (${p.uc}u): Bs ${fmt(p.pc)} c/u\n`;
+    msg += `\n¿Está disponible? ¿Cómo lo recojo o me lo envían?`;
+  } else if(tieneCaja && cantidad >= p.uc){
     const cajas = Math.floor(cantidad / p.uc);
     msg += `🛒 Cantidad: ${cantidad} unidades (${cajas} caja${cajas>1?'s':''} de ${p.uc}u)\n`;
     msg += `💰 Precio: Bs ${fmt(p.pc)} c/u\n`;
@@ -1146,6 +1147,7 @@ function whatsappLink(p, cantidad=1){
 }
 
 function productoCardHTML(p){
+  const tieneCaja = Number.isFinite(p.uc) && p.uc > 0 && Number.isFinite(p.pc);
   return `<article class="producto">
     ${imgHTML(p)}
     <div class="producto-info">
@@ -1158,7 +1160,7 @@ function productoCardHTML(p){
         </div>
         <div class="precio-secundario">
           <span><span class="lbl">Mayor (4+u):</span> <b>Bs ${fmt(p.pm)}</b></span>
-          <span><span class="lbl">Caja (${p.uc}u):</span> <b>Bs ${fmt(p.pc)}</b></span>
+          ${tieneCaja ? `<span><span class="lbl">Caja (${p.uc}u):</span> <b>Bs ${fmt(p.pc)}</b></span>` : ""}
         </div>
       </div>
       <div class="stock-tag">Disponible</div>
@@ -1223,6 +1225,7 @@ function aplicarFiltros(){
 function abrirModal(id){
   const p = PRODUCTOS.find(x => x.id === id);
   if(!p) return;
+  const tieneCaja = Number.isFinite(p.uc) && p.uc > 0 && Number.isFinite(p.pc);
   $modalContenido.innerHTML = `
     <button class="modal-cerrar" onclick="cerrarModal()" aria-label="Cerrar">×</button>
     <div class="modal-grid">
@@ -1240,10 +1243,10 @@ function abrirModal(id){
             <span class="lbl">Mayor (desde 4 unidades)</span>
             <span class="val">Bs ${fmt(p.pm)}</span>
           </div>
-          <div class="modal-precio-fila">
+          ${tieneCaja ? `<div class="modal-precio-fila">
             <span class="lbl">Caja completa (${p.uc} unidades)</span>
             <span class="val">Bs ${fmt(p.pc)}</span>
-          </div>
+          </div>` : ""}
         </div>
         <div class="modal-cantidad">
           <label>Cantidad:</label>
@@ -1286,7 +1289,8 @@ function actualizarTotal(){
   let cant = Math.max(1, parseInt(input.value) || 1);
   input.value = cant;
   let precioU;
-  if(cant >= p.uc) precioU = p.pc;
+  const tieneCaja = Number.isFinite(p.uc) && p.uc > 0 && Number.isFinite(p.pc);
+  if(tieneCaja && cant >= p.uc) precioU = p.pc;
   else if(cant >= 4) precioU = p.pm;
   else precioU = p.pu;
   const total = precioU * cant;
