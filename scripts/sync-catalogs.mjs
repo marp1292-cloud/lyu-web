@@ -211,10 +211,9 @@ function productIndex(productsRows) {
         desc: String(record.DESCRIPCION_CORTA || record.DESCRIPCION || "").trim(),
         cat: category,
         sourceBadge: normalize(record.BADGE) || null,
-        uc: requiredNumber(
-          record.UNIDADES_CAJA,
-          `Productos/UNIDADES_CAJA (producto ${id})`,
-        ),
+        // La cantidad por caja es opcional. Cuando falta, LYU publica
+        // únicamente los niveles unidad y mayor; las tiendas minoristas no usan caja.
+        uc: parseNumber(record.UNIDADES_CAJA),
         img: image,
       };
     });
